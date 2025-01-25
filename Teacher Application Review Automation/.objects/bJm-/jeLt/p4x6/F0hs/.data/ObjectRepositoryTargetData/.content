@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="A4hREYn-i0CT2r34xy3k6g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="localhost/Account/Login" DesignTimeRectangle="529, 779, 776, 69" DesignTimeScaleFactor="1.375" ElementType="InputBoxPassword" FullSelectorArgument="&lt;webctrl id='Password' tag='INPUT' /&gt;" Guid="b0593bc7-3ad8-4aee-b862-7ddf37d5cfde" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Aduca - Education HTML Template' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="fb560d5f-3a2f-4aa0-aef8-156ed15cf79d" CvTextArea="529, 739, 91, 18" CvTextArgument="Password" CvType="Text" DesignTimeRectangle="530, 730, 90, 38" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Password' tag='LABEL' type='' class='label-text' check:innerText='Password' /&gt;" Guid="2cdf1766-027f-443b-be93-c21645d1258e" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="d6d9856a1ad8c8553698f158b4f82689.png" xmlns="">0K7AJ9-3AYE2DAg3FqHyfqg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="USX9g14qSEO_fy-hGfpVAw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="localhost/Admin/TeacherRequests/Details/23" CVScreenId="fdb6ffd8-d734-4304-89f3-bd466b7a9823" DesignTimeRectangle="1182, 568, 147, 45" DesignTimeScaleFactor="1.375" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Download CV' tag='A' href='/uploads/cvs/19130180-1186-4020-a8a7-b2eb031b8275_Nour Othman CV.pdf' /&gt;" Guid="7eab87f2-44dd-421d-813a-9896253a5327" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Kaiadmin - Bootstrap 5 Admin Dashboard' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="47bc9cd31a05a97a541330378a7e966d.png" xmlns="">0hh5hqX1NyU6XKV0-XUDJcw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

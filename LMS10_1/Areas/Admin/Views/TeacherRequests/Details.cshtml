@@ -1,0 +1,52 @@
+﻿@model LMS10_1.Models.TeacherRequests
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Details</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        .profile-image {
+            max-width: 200px;
+            max-height: 200px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="text-center">Request Details</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <!-- صورة المعلم -->
+                <h3>@Model.User.FirstName</h3>
+                <img src="@Url.Content(Model.ImageFilePath)" class="profile-image img-fluid" alt="Teacher Image">
+            </div>
+            <div class="col-md-6">
+                <!-- تفاصيل الفئة -->
+                <h4>Category: @Model.Category.CategoryName</h4>
+                <p><strong>Request Date:</strong> @Model.RequestDate.ToShortDateString()</p>
+                <p><strong>Status:</strong> @Model.Status</p>
+
+                <!-- رابط تحميل السيرة الذاتية -->
+                <h5>CV</h5>
+                @if (!string.IsNullOrEmpty(Model.ImageFilePath))
+                {
+                    <a href="@Url.Content(Model.CvFilePath)" target="_blank" class="btn btn-info">Download CV</a>
+                }
+                else
+                {
+                    <p>No CV uploaded</p>
+                }
+            </div>
+        </div>
+
+        <hr>
+
+        <a class ="btn btn-primary btn-sm" asp-action="Index">Back to List</a>
+    </div>
+</body>
+</html>
+

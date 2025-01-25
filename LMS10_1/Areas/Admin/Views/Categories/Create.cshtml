@@ -1,0 +1,35 @@
+﻿@model LMS10_1.Models.Category
+
+    ViewData["Title"] = "Create";
+<style>
+    .custom-margin-top {
+        margin-top: 100px; /* يمكنك تغيير القيمة كما ترغب */
+    }
+</style>
+
+<div class="row justify-content-center custom-margin-top">
+    <div class="col-md-6">
+        <form asp-action="Create" enctype="multipart/form-data">
+            <div asp-validation-summary="All" class="alert alert-danger" role="alert"></div>
+
+            <!-- اسم الفئة -->
+            <div class="mb-3">
+                <label asp-for="CategoryName" class="form-label fw-bold"></label>
+                <input asp-for="CategoryName" class="form-control" placeholder="Enter category name" />
+                <span asp-validation-for="CategoryName" class="text-danger"></span>
+            </div>
+
+            <!-- صورة الفئة -->
+            <div class="mb-3">
+                <label asp-for="Image" class="form-label fw-bold"></label>
+                <input asp-for="Image" type="file" class="form-control" />
+                <span asp-validation-for="Image" class="text-danger"></span>
+            </div>
+
+            <!-- زر الإرسال -->
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary btn-lg">Create</button>
+            </div>
+        </form>
+    </div>
+</div>

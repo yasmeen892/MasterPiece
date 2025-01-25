@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="juEImahgEUO7rPS643hvXQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="localhost/Account/Login" CVScreenId="98f84a76-d813-4642-a1bf-3c0bc7a913f3" DesignTimeRectangle="1701, 207, 47, 33" DesignTimeScaleFactor="1.375" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Login' tag='A' /&gt;" Guid="ae5772ec-4537-4afd-a8da-cf89727dd9e7" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Aduca - Education HTML Template' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="029277cbf5d9f50c36c2b9532d15b3a3.png" xmlns="">0818ZCZYVdEGYFopHWmSCww</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

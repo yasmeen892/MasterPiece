@@ -1,0 +1,108 @@
+﻿@model Checkout
+
+@{
+    ViewData["Title"] = "Checkout";
+}
+
+<style>
+    /* Include your existing styles here */
+    .alert {
+        margin-bottom: 20px;
+    }
+</style>
+
+<div class="checkout-section mt-150 mb-150">
+    <div class="container">
+        <h2>Checkout</h2>
+
+        @if (!ViewData.ModelState.IsValid)
+        {
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                    {
+                        <li>@error.ErrorMessage</li>
+                    }
+                </ul>
+            </div>
+        }
+
+        <form asp-action="PlaceOrder" method="post">
+            <input type="hidden" asp-for="OrderId" />
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="checkout-accordion-wrap">
+                        <div class="accordion" id="accordionExample">
+                            <!-- Sender Information Section -->
+                            <div class="card single-accordion mb-3">
+                                <div class="card-header" id="headingSender">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseSender" aria-expanded="true" aria-controls="collapseSender">
+                                            Sender Information
+                                        </button>
+                                    </h5>
+                                </div>
+                                
+                                    </div>
+                               
+                    
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="order-details-wrap">
+                        <table class="order-details table">
+                            <thead>
+                                <tr>
+                                    <th>Your Order Details</th>
+                                    <th>Price</th>
+                                    <th>Qyantity</th>
+                                </tr>
+                            </thead>
+                            <tbody class="order-details-body">
+                                @if (Model.OrderItems != null && Model.OrderItems.Any())
+                                {
+                                    int i = 0; // Index for OrderItems
+                                    foreach (var item in Model.OrderItems)
+                                    {
+                                        <tr>
+                                            <td>@item.Courses</td>
+                                            <td>@item.Price</td>
+                                            <td>@item.Quantity</td>
+                                            <input type="hidden" name="OrderItems[@i].CoursesId" value="@item.CoursesId" />
+                                            <input type="hidden" name="OrderItems[@i].Price" value="@item.Price" />
+                                            <input type="hidden" name="OrderItems[@i].Quantity" value="@item.Quantity" />
+                                            <input type="hidden" name="OrderItems[@i].Notes" value="@item.Notes" />
+                                            <input type="hidden" name="OrderItems[@i].OrderItemId" value="@item.OrderItemId" />
+                                        </tr>
+                                        i++; // Increment index
+                                    }
+                                }
+                                else
+                                {
+                                    <tr>
+                                        <td colspan="2">No items in the order.</td>
+                                    </tr>
+                                }
+                            </tbody>
+                            <tbody class="checkout-details">
+                                <tr>
+                                    <td>Subtotal</td>
+                                    <td>@Model.Subtotal.ToString("C")</td>
+                                </tr>
+                                <tr>
+                                    <td>Shipping</td>
+                                    <td>@Model.Shipping.ToString("C")</td>
+                                </tr>
+                                <tr>
+                                    <td>Total</td>
+                                    <td>@Model.Total.ToString("C")</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button type="submit" class="btn btn-success btn-block">Place Order</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

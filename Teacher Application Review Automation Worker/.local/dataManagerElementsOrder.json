@@ -1,0 +1,137 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "bool_IsMatch&Flowchart_1",
+        "str_FilePath&Flowchart_1",
+        "qu_TransactionItem&Flowchart_1",
+        "str_ID&Flowchart_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "LMS_System/LMS_Detailespage.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "DateTime_StartTime&Sequence_2",
+        "XamlFileName&Sequence_2",
+        "bool_PreCondition&Sequence_6",
+        "bool_PostConditinExist&Sequence_9"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_ID"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "LMS_System/LMS_Launch.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "DateTime_StartTime&Sequence_2",
+        "XamlFileName&Sequence_2",
+        "bool_PostConditinExist&Sequence_9"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "LMS_System/LMS_Login.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "DateTime_StartTime&Sequence_2",
+        "XamlFileName&Sequence_2",
+        "bool_PreCondition&Sequence_6",
+        "bool_LoginPage&Sequence_13",
+        "bool_PostConditinExist&Sequence_9"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "In_AdminUser",
+        "In_AdminPssaword"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Orc/LMS_Get Requestes Data.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "DateTime_StartTime&Sequence_2",
+        "XamlFileName&Sequence_2",
+        "bool_PreCondition&TryCatch_1",
+        "bool_PostConditinExist&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_TransactionItem"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "LMS_System/LMS_Dawnload_cv.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "bool_IsDegreeMatch&Sequence_8",
+        "str_CvText&Sequence_8",
+        "str_teacherName&Sequence_6",
+        "teacherName&TryCatch_1",
+        "DateTime_StartTime&Sequence_2",
+        "XamlFileName&Sequence_2",
+        "bool_PreCondition&Sequence_6",
+        "bool_PostConditinExist&Sequence_9"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_IsDegreeMatch",
+        "in_FilePath",
+        "out_filePath",
+        "in_ID"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "LMS_System/LMS_Regicted.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "LMS_System/LMS_Acssepted.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "LMS_System/LMS_Read_pdf.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "DateTime_StartTime&Sequence_2",
+        "XamlFileName&Sequence_2",
+        "bool_PreCondition&Sequence_6",
+        "bool_PostConditinExist&Sequence_9"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_ID"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}

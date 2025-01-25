@@ -1,0 +1,14 @@
+﻿{
+  "Name": "mosab",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "G-BCp_nmEEmTLVrxO7lqnw",
+  "Reference": "udIK7FthN02Gm3Y3tDiQZw/G-BCp_nmEEmTLVrxO7lqnw",
+  "ParentRef": "udIK7FthN02Gm3Y3tDiQZw/AfP01uD9Xk2PjLK0idgc8w",
+  "Created": "2025-01-25T13:32:39.975497Z",
+  "Updated": "2025-01-25T13:32:39.975497Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.12.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

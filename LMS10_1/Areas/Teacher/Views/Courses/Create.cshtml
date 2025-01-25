@@ -1,0 +1,78 @@
+﻿@model LMS10_1.Models.Courses
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Courses</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" enctype="multipart/form-data">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CourseName" class="control-label"></label>
+                <input asp-for="CourseName" class="form-control" />
+                <span asp-validation-for="CourseName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Duration" class="control-label"></label>
+                <input asp-for="Duration" class="form-control" />
+                <span asp-validation-for="Duration" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Languge" class="control-label"></label>
+                <input asp-for="Languge" class="form-control" />
+                <span asp-validation-for="Languge" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="IsCertificate" /> @Html.DisplayNameFor(model => model.IsCertificate)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="PriceBeforeDiscount" class="control-label"></label>
+                <input asp-for="PriceBeforeDiscount" class="form-control" />
+                <span asp-validation-for="PriceBeforeDiscount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CourseDescription" class="control-label"></label>
+                <input asp-for="CourseDescription" class="form-control" />
+                <span asp-validation-for="CourseDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CourseRequrments" class="control-label"></label>
+                <input asp-for="CourseRequrments" class="form-control" />
+                <span asp-validation-for="CourseRequrments" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CategoryId" class="control-label"></label>
+                <select asp-for="CategoryId" class ="form-control" asp-items="ViewBag.CategoryId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="CourseDate" class="control-label"></label>
+                <input asp-for="CourseDate" class="form-control" />
+                <span asp-validation-for="CourseDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="ImageFile">Course Image</label>
+                <input type="file" class="form-control" id="ImageFile" name="ImageFile" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Edge Aduca - Education HTML Template",
+  "Type": "App",
+  "Id": "fNra4i9s4Eq7txLcZwIzAA",
+  "Reference": "6AvHQZzA7k-1m7riz-x8jw/fNra4i9s4Eq7txLcZwIzAA",
+  "Created": "2025-01-24T15:46:37.9110401Z",
+  "Updated": "2025-01-24T15:46:37.9110401Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.12.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

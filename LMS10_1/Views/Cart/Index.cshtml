@@ -1,0 +1,27 @@
+﻿@model List<CartItem>
+
+<h1>Your Cart</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Course</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Courses.CourseName</td>
+                <td>@item.Quantity</td>
+                <td>@(item.Quantity * item.Courses.Price) $</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<form asp-action="Checkout" method="post">
+    <button type="submit">Checkout</button>
+</form>

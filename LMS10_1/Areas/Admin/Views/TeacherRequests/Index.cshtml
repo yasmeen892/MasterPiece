@@ -1,0 +1,227 @@
+﻿@model IEnumerable<LMS10_1.Models.TeacherRequests>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Requests</title>
+    <style>
+        /* تطبيق نظام الـ Box-Sizing لتحسين التعامل مع الأحجام */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            height: 50%;
+            margin: 0;
+            padding: 0;
+            overflow-y: auto; /* تفعيل السكرول للصفحة بالكامل */
+        }
+
+        .container {
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+
+        .scrollable-section {
+            max-height: none; /* السماح بامتداد المحتوى الكامل */
+            overflow-y: visible; /* السماح بعرض المحتوى الكامل بدون تمرير داخلي */
+            border: none; /* اختياري: إزالة الحدود إذا لم تعد مطلوبة */
+            padding: 0; /* اختياري: إزالة الحشو إذا لم يكن ضروريًا */
+        }
+
+
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+            table th, table td {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: left;
+                white-space: nowrap; /* منع الانتقال للسطر الجديد */
+                text-overflow: ellipsis; /* تقليم النصوص الطويلة */
+                overflow: hidden; /* إخفاء النصوص الزائدة */
+            }
+
+            table th {
+                background-color: #f4f4f4;
+            }
+
+        .pagination-wrap {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .custom-pagination a {
+            margin: 0 5px;
+            text-decoration: none;
+            color: #007bff;
+        }
+
+            .custom-pagination a.active {
+                font-weight: bold;
+                color: #000;
+            }
+
+        .btn {
+            display: inline-block;
+            padding: 5px 10px;
+            text-decoration: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .btn-info {
+            background-color: #17a2b8;
+            color: white;
+        }
+
+        .btn-success {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .btn-danger {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Teacher Requests Management</h2>
+
+        <!-- طلبات قيد الانتظار -->
+        <h3>Pending Requests</h3>
+        <div class="scrollable-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var request in ViewBag.PendingRequests)
+                    {
+                        <tr>
+                            <td>@request.Id</td> <!-- عرض الـ ID -->
+                            <td>@request.User.UserName</td>
+                            <td>@request.Category.CategoryName</td>
+                            <td>@request.RequestDate.ToShortDateString()</td>
+                            <td>
+                                <a href="@Url.Action("Details", new { id = request.Id })" class="btn btn-info">Details</a>
+                                <form asp-action="ChangeStatus" method="post" style="display:inline;">
+                                    <input type="hidden" name="id" value="@request.Id" />
+                                    <button type="submit" name="status" value="Approved" class="btn btn-success">Approve</button>
+                                    <button type="submit" name="status" value="Rejected" class="btn btn-danger">Reject</button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+
+            </table>
+        </div>
+
+        <!-- الطلبات المقبولة -->
+        <h3>Approved Requests</h3>
+        <div class="scrollable-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var request in ViewBag.ApprovedRequests)
+                    {
+                        <tr>
+                            <td>@request.User.UserName</td>
+                            <td>@request.Category.CategoryName</td>
+                            <td>@request.RequestDate.ToShortDateString()</td>
+                            <td>
+                                <form asp-action="ChangeStatus" method="post" style="display:inline;">
+                                    <input type="hidden" name="id" value="@request.Id" />
+                                    <button type="submit" name="status" value="Rejected" class="btn btn-danger">Reject</button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <!-- الطلبات المرفوضة -->
+        <h3>Rejected Requests</h3>
+        <div class="scrollable-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var request in ViewBag.RejectedRequests)
+                    {
+                        <tr>
+                            <td>@request.User.UserName</td>
+                            <td>@request.Category.CategoryName</td>
+                            <td>@request.RequestDate.ToShortDateString()</td>
+                            <td>
+                                <form asp-action="ChangeStatus" method="post" style="display:inline;">
+                                    <input type="hidden" name="id" value="@request.Id" />
+                                    <button type="submit" name="status" value="Approved" class="btn btn-success">Approve</button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination-wrap">
+            <div class="custom-pagination">
+                @if (ViewBag.CurrentPage > 1)
+                {
+                    <a href="@Url.Action("Index", new { page = ViewBag.CurrentPage - 1 })" class="prev">Previous</a>
+                }
+
+                @for (int i = 1; i <= ViewBag.TotalPages; i++)
+                {
+                    <a href="@Url.Action("Index", new { page = i })" class="@(i == ViewBag.CurrentPage ? "active" : "")">@i</a>
+                }
+
+                @if (ViewBag.CurrentPage < ViewBag.TotalPages)
+                {
+                    <a href="@Url.Action("Index", new { page = ViewBag.CurrentPage + 1 })" class="next">Next</a>
+                }
+            </div>
+        </div>
+
+
+
+    </div>
+</body>
+</html>

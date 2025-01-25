@@ -1,0 +1,565 @@
+﻿@* @model LMS10_1.Models.ViewModels.CategoryCourseDataModel *@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="TechyDevs" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Aduca - Education HTML Template</title>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="~/https://fonts.gstatic.com" />
+    <link href="~/https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap"
+          rel="stylesheet" />
+
+    <!-- Favicon -->
+    <link rel="icon" sizes="16x16" href="images/favicon.png" />
+
+    <!-- inject:css -->
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/select2.min.css" />
+    <link rel="stylesheet" href="~/css/line-awesome.css" />
+    <link rel="stylesheet" href="~/css/animate.min.css" />
+    <link rel="stylesheet" href="~/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="~/css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="~/css/fancybox.css" />
+    <link rel="stylesheet" href="~/css/tooltipster.bundle.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
+    <!-- end inject -->
+</head>
+<body>
+    <!-- start cssload-loader -->
+    <div class="preloader">
+        <div class="loader">
+            <svg class="spinner" viewBox="0 0 50 50">
+                <circle class="path"
+                        cx="25"
+                        cy="25"
+                        r="20"
+                        fill="none"
+                        stroke-width="5"></circle>
+            </svg>
+        </div>
+    </div>
+    <!-- end cssload-loader -->
+    <!--======================================
+        START HEADER AREA
+    ======================================-->
+    <header class="header-menu-area bg-white">
+        <div class="header-top pe-150px ps-150px border-bottom border-bottom-gray py-1">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="header-widget">
+                            <ul class="generic-list-item d-flex flex-wrap align-items-center fs-14">
+                                <li class="d-flex align-items-center pe-3 me-3 border-right border-right-gray">
+                                    <i class="la la-phone me-1"></i><a href="tel:00123456789"> (962) 781398654</a>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <i class="la la-envelope-o me-1"></i><a href="mailto:yasmeen99@gmail.com"> yasmeen99@gmail.com</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="header-widget d-flex flex-wrap align-items-center justify-content-end">
+                            <div class="theme-picker d-flex align-items-center">
+                                <button class="theme-picker-btn dark-mode-btn" title="Dark mode">
+                                    <svg id="moon" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                    </svg>
+                                </button>
+                                <button class="theme-picker-btn light-mode-btn" title="Light mode">
+                                    <svg id="sun" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="5"></circle>
+                                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                    </svg>
+                                </button>
+                            </div>
+                            <ul class="generic-list-item d-flex flex-wrap align-items-center fs-14 border-left border-left-gray ps-3 ms-3">
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <li class="d-flex align-items-center pe-3 me-3 border-right border-right-gray">
+                                        <i class="la la-user me-1"></i>
+                                        <span>Welcome, @User.Identity.Name</span>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <i class="la la-sign-out me-1"></i>
+                                        <a href="@Url.Action("Logout", "Account")">Logout</a>
+                                    </li>
+                                }
+                                else
+                                {
+                                    <li class="d-flex align-items-center pe-3 me-3 border-right border-right-gray">
+                                        <i class="la la-sign-in me-1"></i>
+                                        <a href="@Url.Action("Login", "Account")">Login</a>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <i class="la la-user me-1"></i>
+                                        <a href="@Url.Action("Register", "Account")">Register</a>
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-menu-content pe-150px ps-150px bg-white">
+            <div class="container-fluid">
+                <div class="main-menu-content">
+                    <a href="#" class="down-button"><i class="la la-angle-down"></i></a>
+                    <div class="row align-items-center">
+                        <div class="col-lg-2">
+                            <div class="logo-box">
+                                <a href="index.html" class="logo">
+                                    <img src="~/images/logo.png" alt="logo" />
+                                </a>
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-10">
+                            <div class="menu-wrapper">
+                                <div class="menu-category dropdown">
+                                    <ul class="nav d-flex justify-content-start align-items-center">
+                                        <!-- Home -->
+                                        <li class="nav-item" style="margin-right: 30px;">
+                                            <a class="nav-link" href="@Url.Action("Index", "Home")">Home</a>
+                                        </li>
+
+                                        <!-- Categories Dropdown -->
+                                      @*   <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Categories
+                                            </a>
+                                            <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
+                                                @foreach (var category in Model.Categories)
+                                                {
+                                                    <li class="dropdown-submenu">
+                                                        <a class="dropdown-item dropdown-toggle" href="#">@category.CategoryName</a>
+                                                        <ul class="dropdown-menu">
+                                                            @foreach (var course in category.Courses)
+                                                            {
+                                                                <li><a class="dropdown-item" href="#">@course.CourseName</a></li>
+                                                            }
+                                                        </ul>
+                                                    </li>
+                                                }
+                                            </ul>
+                                        </li>
+ *@
+                                        <!-- Courses -->
+                                        <li class="nav-item dropdown" style="margin-right: 30px;">
+                                            <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Courses
+                                            </a>
+                                            <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
+                                                <li><a class="dropdown-item" href="@Url.Action("Details", "Lesson")">Lesson Details</a></li>
+                                                <li><a class="dropdown-item" href="@Url.Action("Index", "MyCourses")">My Courses</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <!-- Contact Us -->
+                                        <li class="nav-item" style="margin-right: 30px;">
+                                            <a class="nav-link" href="@Url.Action("Contact", "Home")">Contact Us</a>
+                                        </li>
+
+                                        <!-- About -->
+                                        <li class="nav-item" style="margin-right: 30px;">
+                                            <a class="nav-link" href="@Url.Action("About", "Home")">About</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+
+   
+        </div>
+    </header>
+
+    <!-- end header-menu-area -->
+    <!--======================================
+            END HEADER AREA
+    ======================================-->
+  
+
+
+
+
+    <div>
+        @RenderBody()
+    </div>
+
+
+
+
+    <!-- ================================
+             END FOOTER AREA
+    ================================= -->
+    <section class="footer-area pt-100px">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 responsive-column-half">
+                    <div class="footer-item">
+                        <a href="index.html">
+                            <img src="~/images/logo.png"
+                                 alt="footer logo"
+                                 class="footer__logo" />
+                        </a>
+                        <ul class="generic-list-item pt-4">
+                            <li><a href="tel:0797513464">07975134646</a></li>
+                            <li>
+                                <a href="mailto:salmanyasmeen392">salmanyasmeen392@gmail.com</a>
+                            </li>
+                            
+                        </ul>
+                   
+                    </div>
+                    <!-- end footer-item -->
+                </div>
+                <!-- end col-lg-3 -->
+                <div class="col-lg-3 responsive-column-half">
+                    <div class="footer-item">
+                        <h3 class="fs-20 font-weight-semi-bold">Company</h3>
+                        <span class="section-divider section--divider"></span>
+                        <ul class="generic-list-item">
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Contact us</a></li>
+                            
+                            <li><a href="@Url.Action("Create", "TeacherRequests")">Become an instructor</a></li>
+
+                        </ul>
+                    </div>
+                    <!-- end footer-item -->
+                </div>
+             
+                <!-- end row -->
+            </div>
+            <!-- end container -->
+            <div class="section-block"></div>
+            <div class="copyright-content py-4">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <p class="copy-desc">
+                                &copy; 2021 Aduca. All Rights Reserved. by
+                                <a href="https://techydevs.com/">TechyDevs</a>
+                            </p>
+                        </div>
+                        <!-- end col-lg-6 -->
+                        <div class="col-lg-6">
+                            <div class="d-flex flex-wrap align-items-center justify-content-end">
+                                <ul class="generic-list-item d-flex flex-wrap align-items-center fs-14">
+                                    <li class="me-3">
+                                        <a href="terms-and-conditions.html">Terms & Conditions</a>
+                                    </li>
+                                    <li class="me-3">
+                                        <a href="privacy-policy.html">Privacy Policy</a>
+                                    </li>
+                                </ul>
+                                <!-- test -->
+
+                            </div>
+                            <!-- end col-lg-6 -->
+                        </div>
+                        <!-- end row -->
+                    </div>
+                    <!-- end container -->
+                </div>
+                <!-- end copyright-content -->
+    </section>
+    <!-- end footer-area -->
+    <!-- ================================
+              END FOOTER AREA
+    ================================= -->
+    <!-- start scroll top -->
+    <div id="scroll-top">
+        <i class="la la-arrow-up" title="Go top"></i>
+    </div>
+    <!-- end scroll top -->
+
+    <div class="tooltip_templates">
+        <div id="tooltip_content_1">
+            <div class="card card-item">
+                <div class="card-body">
+                    <p class="card-text pb-2">
+                        By <a href="teacher-detail.html">Jose Portilla</a>
+                    </p>
+                    <h5 class="card-title pb-1">
+                        <a href="course-details.html">The Business Intelligence Analyst Course 2021</a>
+                    </h5>
+                    <div class="d-flex align-items-center pb-1">
+                        <h6 class="ribbon fs-14 me-2">Bestseller</h6>
+                        <p class="text-success fs-14 font-weight-medium">
+                            Updated<span class="font-weight-bold ps-1">November 2020</span>
+                        </p>
+                    </div>
+                    <ul class="generic-list-item generic-list-item-bullet generic-list-item--bullet d-flex align-items-center fs-14">
+                        <li>23 total hours</li>
+                        <li>All Levels</li>
+                    </ul>
+                    <p class="card-text pt-1 fs-14 lh-22">
+                        The skills you need to become a BI Analyst - Statistics, Database
+                        theory, SQL, Tableau – Everything is included
+                    </p>
+                    <ul class="generic-list-item fs-14 py-3">
+                        <li>
+                            <i class="la la-check me-1 text-black"></i> Become an expert in
+                            Statistics, SQL, Tableau, and problem solving
+                        </li>
+                        <li>
+                            <i class="la la-check me-1 text-black"></i> Boost your resume
+                            with in-demand skills
+                        </li>
+                        <li>
+                            <i class="la la-check me-1 text-black"></i> Gather, organize,
+                            analyze and visualize data
+                        </li>
+                    </ul>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="#" class="btn theme-btn flex-grow-1 me-3"><i class="la la-shopping-cart me-1 fs-18"></i> Add to Cart</a>
+                        <div class="icon-element icon-element-sm shadow-sm cursor-pointer"
+                             title="Add to Wishlist">
+                            <i class="la la-heart-o"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end card -->
+        </div>
+    </div>
+    <!-- end tooltip_templates -->
+    <div class="tooltip_templates">
+        <div id="tooltip_content_2">
+            <div class="card card-item">
+                <div class="card-body">
+                    <p class="card-text pb-2">
+                        By <a href="teacher-detail.html">Jose Portilla</a>
+                    </p>
+                    <h5 class="card-title pb-1">
+                        <a href="course-details.html">Ultimate Adobe Photoshop Training: From Beginner to Pro</a>
+                    </h5>
+                    <div class="d-flex align-items-center pb-1">
+                        <h6 class="ribbon fs-14 me-2">Bestseller</h6>
+                        <p class="text-success fs-14 font-weight-medium">
+                            Updated<span class="font-weight-bold ps-1">November 2020</span>
+                        </p>
+                    </div>
+                    <ul class="generic-list-item generic-list-item-bullet generic-list-item--bullet d-flex align-items-center fs-14">
+                        <li>23 total hours</li>
+                        <li>All Levels</li>
+                    </ul>
+                    <p class="card-text pt-1 fs-14 lh-22">
+                        The skills you need to become a BI Analyst - Statistics, Database
+                        theory, SQL, Tableau – Everything is included
+                    </p>
+                    <ul class="generic-list-item fs-14 py-3">
+                        <li>
+                            <i class="la la-check me-1 text-black"></i> Become an expert in
+                            Statistics, SQL, Tableau, and problem solving
+                        </li>
+                        <li>
+                            <i class="la la-check me-1 text-black"></i> Boost your resume
+                            with in-demand skills
+                        </li>
+                        <li>
+                            <i class="la la-check me-1 text-black"></i> Gather, organize,
+                            analyze and visualize data
+                        </li>
+                    </ul>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="#" class="btn theme-btn flex-grow-1 me-3"><i class="la la-shopping-cart me-1 fs-18"></i> Add to Cart</a>
+                        <div class="icon-element icon-element-sm shadow-sm cursor-pointer"
+                             title="Add to Wishlist">
+                            <i class="la la-heart-o"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end card -->
+        </div>
+    </div>
+    <!-- end tooltip_templates -->
+    <div class="tooltip_templates">
+        <div id="tooltip_content_3">
+            <div class="card card-item">
+                <div class="card-body">
+                    <p class="card-text pb-2">
+                        By <a href="teacher-detail.html">Jose Portilla</a>
+                    </p>
+                    <h5 class="card-title pb-1">
+                        <a href="course-details.html">The Complete WordPress Website Business Course</a>
+                    </h5>
+                    <div class="d-flex align-items-center pb-1">
+                        <h6 class="ribbon fs-14 me-2">Bestseller</h6>
+                        <p class="text-success fs-14 font-weight-medium">
+                            Updated<span class="font-weight-bold ps-1">November 2020</span>
+                        </p>
+                    </div>
+                    <ul class="generic-list-item generic-list-item-bullet generic-list-item--bullet d-flex align-items-center fs-14">
+                        <li>23 total hours</li>
+                        <li>All Levels</li>
+                    </ul>
+                    <p class="card-text pt-1 fs-14 lh-22">
+                        The skills you need to become a BI Analyst - Statistics, Database
+                        theory, SQL, Tableau – Everything is included
+                    </p>
+                    <ul class="generic-list-item fs-14 py-3">
+                        <li>
+                            <i class="la la-check me-1 text-black"></i> Become an expert in
+                            Statistics, SQL, Tableau, and problem solving
+                        </li>
+                        <li>
+                            <i class="la la-check me-1 text-black"></i> Boost your resume
+                            with in-demand skills
+                        </li>
+                        <li>
+                            <i class="la la-check me-1 text-black"></i> Gather, organize,
+                            analyze and visualize data
+                        </li>
+                    </ul>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="#" class="btn theme-btn flex-grow-1 me-3"><i class="la la-shopping-cart me-1 fs-18"></i> Add to Cart</a>
+                        <div class="icon-element icon-element-sm shadow-sm cursor-pointer"
+                             title="Add to Wishlist">
+                            <i class="la la-heart-o"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end card -->
+        </div>
+    </div>
+    <!-- end tooltip_templates -->
+    <div class="tooltip_templates">
+        <div id="tooltip_content_4">
+            <div class="card card-item">
+                <div class="card-body">
+                    <p class="card-text pb-2">
+                        By <a href="teacher-detail.html">Jose Portilla</a>
+                    </p>
+                    <h5 class="card-title pb-1">
+                        <a href="course-details.html">The Ultimate Drawing Course - Beginner to Advanced</a>
+                    </h5>
+                    <div class="d-flex align-items-center pb-1">
+                        <h6 class="ribbon fs-14 me-2">Bestseller</h6>
+                        <p class="text-success fs-14 font-weight-medium">
+                            Updated<span class="font-weight-bold ps-1">November 2020</span>
+                        </p>
+                    </div>
+                    <ul class="generic-list-item generic-list-item-bullet generic-list-item--bullet d-flex align-items-center fs-14">
+                        <li>23 total hours</li>
+                        <li>All Levels</li>
+                    </ul>
+                    <p class="card-text pt-1 fs-14 lh-22">
+                        The skills you need to become a BI Analyst - Statistics, Database
+                        theory, SQL, Tableau – Everything is included
+                    </p>
+                    <ul class="generic-list-item fs-14 py-3">
+                        <li>
+                            <i class="la la-check me-1 text-black"></i> Become an expert in
+                            Statistics, SQL, Tableau, and problem solving
+                        </li>
+                        <li>
+                            <i class="la la-check me-1 text-black"></i> Boost your resume
+                            with in-demand skills
+                        </li>
+                        <li>
+                            <i class="la la-check me-1 text-black"></i> Gather, organize,
+                            analyze and visualize data
+                        </li>
+                    </ul>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="#" class="btn theme-btn flex-grow-1 me-3"><i class="la la-shopping-cart me-1 fs-18"></i> Add to Cart</a>
+                        <div class="icon-element icon-element-sm shadow-sm cursor-pointer"
+                             title="Add to Wishlist">
+                            <i class="la la-heart-o"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end card -->
+        </div>
+    </div>
+    <!-- end tooltip_templates -->
+    <div class="tooltip_templates">
+        <div id="tooltip_content_5">
+            <div class="card card-item">
+                <div class="card-body">
+                    <p class="card-text pb-2">
+                        By <a href="teacher-detail.html">Jose Portilla</a>
+                    </p>
+                    <h5 class="card-title pb-1">
+                        <a href="course-details.html">The Complete Digital Marketing Course - 12 Courses in 1</a>
+                    </h5>
+                    <div class="d-flex align-items-center pb-1">
+                        <h6 class="ribbon fs-14 me-2">Bestseller</h6>
+                        <p class="text-success fs-14 font-weight-medium">
+                            Updated<span class="font-weight-bold ps-1">November 2020</span>
+                        </p>
+                    </div>
+                    <ul class="generic-list-item generic-list-item-bullet generic-list-item--bullet d-flex align-items-center fs-14">
+                        <li>23 total hours</li>
+                        <li>All Levels</li>
+                    </ul>
+                    <p class="card-text pt-1 fs-14 lh-22">
+                        The skills you need to become a BI Analyst - Statistics, Database
+                        theory, SQL, Tableau – Everything is included
+                    </p>
+                    <ul class="generic-list-item fs-14 py-3">
+                        <li>
+                            <i class="la la-check me-1 text-black"></i> Become an expert in
+                            Statistics, SQL, Tableau, and problem solving
+                        </li>
+                        <li>
+                            <i class="la la-check me-1 text-black"></i> Boost your resume
+                            with in-demand skills
+                        </li>
+                        <li>
+                            <i class="la la-check me-1 text-black"></i> Gather, organize,
+                            analyze and visualize data
+                        </li>
+                    </ul>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="#" class="btn theme-btn flex-grow-1 me-3"><i class="la la-shopping-cart me-1 fs-18"></i> Add to Cart</a>
+                        <div class="icon-element icon-element-sm shadow-sm cursor-pointer"
+                             title="Add to Wishlist">
+                            <i class="la la-heart-o"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end card -->
+        </div>
+    </div>
+    <!-- end tooltip_templates -->
+    <!-- template js files -->
+    <script src="~/js/jquery-3.7.1.min.js"></script>
+    <script src="~/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/owl.carousel.min.js"></script>
+    <script src="~/js/isotope.js"></script>
+    <script src="~/js/waypoint.min.js"></script>
+    <script src="~/js/jquery.counterup.min.js"></script>
+    <script src="~/js/fancybox.js"></script>
+    <script src="~/js/datedropper.min.js"></script>
+    <script src="~/js/emojionearea.min.js"></script>
+    <script src="~/js/select2.min.js"></script>
+    <script src="~/js/tooltipster.bundle.min.js"></script>
+    <script src="~/js/jquery.lazy.min.js"></script>
+    <script src="~/js/main.js"></script>
+</body>
+</html>

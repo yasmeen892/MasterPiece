@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="NRz9Ylau7EC3sdVee6vpEg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="localhost/Admin" CVScreenId="eabee560-b448-4f5f-b81e-1b73ab77384b" DesignTimeRectangle="103, 354, 153, 35" DesignTimeScaleFactor="1.375" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Teacher Request' tag='P' /&gt;" Guid="58c929d4-2291-4c2b-846d-5313a1f6036a" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Kaiadmin - Bootstrap 5 Admin Dashboard' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="d326e172e7f63697771735b71349077e.png" xmlns="">0XAytKjJj7k-YtFaI6ohdjg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

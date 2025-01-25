@@ -1,0 +1,14 @@
+﻿@model Checkout
+
+@{
+    ViewData["Title"] = "Order Confirmation";
+}
+
+<h2>Thank You for Your Order!</h2>
+<p>Your order has been placed successfully.</p>
+<p>Order Details:</p>
+<ul>
+
+    <li>Subtotal: @Model.Subtotal</li>
+    <li>Total: @Model.Total</li>
+</ul>

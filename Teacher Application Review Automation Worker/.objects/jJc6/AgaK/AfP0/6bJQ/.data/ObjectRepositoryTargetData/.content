@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="9aAU0CdvGEmCD-6tu7cnqA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="localhost/uploads/cvs/19130180-1186-4020-a8a7-b2eb031b8275_Nour%20Othman%20CV.pdf" DesignTimeRectangle="1602, 162, 46, 41" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;ctrl name='Pastel Pink and Brown Clean Web Developer Cv Resume' role='document' /&gt;&lt;ctrl name='PDF bar' role='tool bar' /&gt;&lt;ctrl name='Save (Ctrl+S)' role='push button' /&gt;" Guid="04fdd4b5-347f-4ae9-b66d-c5f05a5b8054" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='Pastel Pink and Brown Clean Web Developer Cv Resume and 5 more p*' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="7e29216f3d4eba562839ad3ec2669aab.png" xmlns="">0T7711eWAzE2E6kLfImOksw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

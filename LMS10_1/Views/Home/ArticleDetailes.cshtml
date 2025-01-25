@@ -1,0 +1,19 @@
+﻿@model Article
+
+<!-- Article Section Start -->
+<div class="container article-section py-5">
+    <div class="row">
+        <div class="col-12">
+            <article>
+                <img src="@Model.Image" class="article-image img-fluid mb-4" alt="Article Image" style="max-width: 100%; height: auto;">
+
+                <h1 class="article-title">Understand Your Baby’s Cues</h1>
+                <p class="article-content">
+                    <h2>@Model.ArticleTitle</h2>
+                    @Model.ArticleContent
+                </p>
+            </article>
+        </div>
+    </div>
+</div>
+<!-- Article Section End -->

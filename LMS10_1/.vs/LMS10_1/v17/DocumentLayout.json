@@ -1,0 +1,145 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\MJO-MF-003\\source\\repos\\LMS10_1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5F94B736-30A1-4AFC-9F41-F2281C42CBB5}|LMS10_1.csproj|c:\\users\\mjo-mf-003\\source\\repos\\lms10_1\\wwwroot\\become-a-teacher.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F94B736-30A1-4AFC-9F41-F2281C42CBB5}|LMS10_1.csproj|solutionrelative:wwwroot\\become-a-teacher.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F94B736-30A1-4AFC-9F41-F2281C42CBB5}|LMS10_1.csproj|c:\\users\\mjo-mf-003\\source\\repos\\lms10_1\\areas\\admin\\controllers\\teacherrequestscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F94B736-30A1-4AFC-9F41-F2281C42CBB5}|LMS10_1.csproj|solutionrelative:areas\\admin\\controllers\\teacherrequestscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F94B736-30A1-4AFC-9F41-F2281C42CBB5}|LMS10_1.csproj|c:\\users\\mjo-mf-003\\source\\repos\\lms10_1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F94B736-30A1-4AFC-9F41-F2281C42CBB5}|LMS10_1.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F94B736-30A1-4AFC-9F41-F2281C42CBB5}|LMS10_1.csproj|c:\\users\\mjo-mf-003\\source\\repos\\lms10_1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F94B736-30A1-4AFC-9F41-F2281C42CBB5}|LMS10_1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 12,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:141:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:140:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:142:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:138:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:139:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "become-a-teacher.html",
+              "DocumentMoniker": "C:\\Users\\MJO-MF-003\\source\\repos\\LMS10_1\\wwwroot\\become-a-teacher.html",
+              "RelativeDocumentMoniker": "wwwroot\\become-a-teacher.html",
+              "ToolTip": "C:\\Users\\MJO-MF-003\\source\\repos\\LMS10_1\\wwwroot\\become-a-teacher.html",
+              "RelativeToolTip": "wwwroot\\become-a-teacher.html",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAGYAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-01-25T11:45:32.909Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TeacherRequestsController.cs",
+              "DocumentMoniker": "C:\\Users\\MJO-MF-003\\source\\repos\\LMS10_1\\Areas\\Admin\\Controllers\\TeacherRequestsController.cs",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\TeacherRequestsController.cs",
+              "ToolTip": "C:\\Users\\MJO-MF-003\\source\\repos\\LMS10_1\\Areas\\Admin\\Controllers\\TeacherRequestsController.cs",
+              "RelativeToolTip": "Areas\\Admin\\Controllers\\TeacherRequestsController.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAADwv0UAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-24T17:14:03.259Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\MJO-MF-003\\source\\repos\\LMS10_1\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\MJO-MF-003\\source\\repos\\LMS10_1\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-24T01:28:20.68Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\MJO-MF-003\\source\\repos\\LMS10_1\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\MJO-MF-003\\source\\repos\\LMS10_1\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-24T01:25:34.409Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1454,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

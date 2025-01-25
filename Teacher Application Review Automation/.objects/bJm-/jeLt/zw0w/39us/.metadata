@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Teacher Request",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "39uspIumIkymnBeX6ydvqg",
+  "Reference": "6AvHQZzA7k-1m7riz-x8jw/39uspIumIkymnBeX6ydvqg",
+  "ParentRef": "6AvHQZzA7k-1m7riz-x8jw/zw0wWenfcUSZyI79REBUNA",
+  "Created": "2025-01-24T17:07:57.33123Z",
+  "Updated": "2025-01-24T17:07:57.33123Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.12.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

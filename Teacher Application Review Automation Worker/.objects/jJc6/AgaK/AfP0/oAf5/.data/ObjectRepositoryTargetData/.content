@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="xJyW-JC0FUySUtouZnd7gQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="localhost/uploads/cvs/19130180-1186-4020-a8a7-b2eb031b8275_Nour%20Othman%20CV.pdf" CVScreenId="fd18bb0d-cc35-46a5-836b-9e43bce5f014" DesignTimeRectangle="169, 238, 742, 22" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' aaname='File name:' /&gt;" Guid="48a89d23-3971-486f-b034-3aa91d55fdc4" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='#32770' title='Save As' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="c31d5c7fb2496f9551569751953ed4d8.png" xmlns="">0RdnEAwrVXUywqfqXbZ01aA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

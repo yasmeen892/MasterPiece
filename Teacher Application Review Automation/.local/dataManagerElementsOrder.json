@@ -1,0 +1,82 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "LMS/LMS_Launch.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "DateTime_StartTime&Sequence_2",
+        "XamlFileName&Sequence_2",
+        "bool_PostConditinExist&Sequence_9"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "LMS/LMS_Login.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "DateTime_StartTime&Sequence_2",
+        "XamlFileName&Sequence_2",
+        "bool_PreCondition&Sequence_6",
+        "bool_LoginPage&Sequence_13",
+        "bool_PostConditinExist&Sequence_9"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "In_AdminPssaword",
+        "In_AdminUser"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_Username&Sequence_1",
+        "str_Password&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "LMS/LMS_Scrape Teacher Rrquestes.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_TeacherRequestss&TryCatch_1",
+        "DateTime_StartTime&Sequence_2",
+        "XamlFileName&Sequence_2",
+        "bool_PreCondition&Sequence_3",
+        "bool_PostConditinExist&Sequence_4",
+        "ExtractDataTable&Sequence_4"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "APPControleSystem/KillAllUsedApplications.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "DateTime_StartTime&Sequence_2",
+        "XamlFileName&Sequence_2",
+        "bool_PostConditinExist&Sequence_9",
+        "IenumProcessRunning&Sequence_9"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_arrAppProcessNames"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}

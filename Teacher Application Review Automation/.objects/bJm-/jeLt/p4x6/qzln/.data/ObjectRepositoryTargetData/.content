@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="4Yg9UxLaTU-WHzwBcIDB_A" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="localhost/Account/Login" CVScreenId="8fc397cd-cf99-4bde-9bfa-0fcbb3e7f264" DesignTimeRectangle="530, 639, 859, 69" DesignTimeScaleFactor="1.375" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='Email' tag='INPUT' /&gt;" Guid="fe04f46b-dca6-4b1e-8427-6d6af5dd98ae" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Aduca - Education HTML Template' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="8fc397cd-cf99-4bde-9bfa-0fcbb3e7f264" CvTextArea="529, 597, 52, 20" CvTextArgument="Email" CvType="Text" DesignTimeRectangle="530, 590, 52, 38" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='label-text' aaname='Email' check:innerText='Email' /&gt;" Guid="caedfdbe-86a5-4746-af4e-aced43689c2d" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="8acec80232a0a7d3d88b5273816c3161.png" xmlns="">0S-fM4WAMFk2QQA6-UhNxpQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

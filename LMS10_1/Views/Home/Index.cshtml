@@ -1,0 +1,193 @@
+﻿@using LMS10_1.Models.ViewModels
+@model CategoryCourseDataModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+.card-item {
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-image img {
+    height: 200px; 
+    object-fit: cover; 
+    width: 100%;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between; 
+}
+
+</style>
+
+<section class="hero-area">
+    <div class="hero-slider owl-action-styled">
+        <!-- First Hero Slide -->
+        <div class="hero-slider-item hero-bg-1">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="section-heading">
+                        <h2 class="section__title text-white fs-65 lh-80 pb-3">
+                            We Help You Learn <br />
+                            What You Love
+                        </h2>
+                        <p class="section__desc text-white pb-4">
+                            Emply dummy text of the printing and typesetting industry orem
+                            Ipsum has been the <br />industry's standard dummy text ever
+                            since printing and typesetting industry.
+                        </p>
+                    </div>
+                    <!-- end section-heading -->
+                    <div class="hero-btn-box d-flex flex-wrap align-items-center pt-1">
+                        <a href="admission.html" class="btn theme-btn me-4 mb-4">
+                            Join with Us <i class="la la-arrow-right icon ms-1"></i>
+                        </a>
+                    </div>
+                    <!-- end hero-btn-box -->
+                </div>
+                <!-- end hero-content -->
+
+            </div>
+            <!-- end container -->
+        </div>
+        <!-- end hero-slider-item -->
+
+    </div>
+    <!-- end hero-slide -->
+</section>
+
+<section class="category-area pb-90px">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-9">
+                <div class="category-content-wrap">
+                    <div class="section-heading">
+                        <h5 class="ribbon ribbon-lg mb-2">Categories</h5>
+                        <h2 class="section__title">Popular Categories</h2>
+                        <span class="section-divider"></span>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+        <div class="category-wrapper mt-30px">
+            <div class="row">
+                @foreach (var item in Model.Categories)
+                {
+                    <div class="col-lg-4 responsive-column-half">
+                        <div class="category-item">
+                            <img class="cat__img lazy"
+                                 src="@item.ImagePath"
+                                 data-src="~/../images/img1.jpg"
+                                 alt="Category image" />
+                            <div class="category-content">
+                                <div class="category-inner">
+                                    <h3 class="cat__title">
+                                        <a asp-action="CoursesByCategoryId"
+                                           asp-controller="Categories"
+                                           asp-route-id="@item.CategoryId">@item.CategoryName</a>
+                                    </h3>
+                                    <p class="cat__meta">@item.Courses.Count</p>
+                                    <a asp-action="CoursesByCategoryId"
+                                       asp-controller="Categories"
+                                       asp-route-id="@item.CategoryId"
+                                       class="btn theme-btn theme-btn-sm theme-btn-white">
+                                        Explore<i class="la la-arrow-right icon ms-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+<!--======================================
+        START COURSE AREA
+======================================-->
+<section class="course-area pb-120px">
+    <div class="container">
+        <div class="section-heading text-center">
+            <h5 class="ribbon ribbon-lg mb-2">Choose your desired courses</h5>
+            <h2 class="section__title">
+                The world's largest selection of courses
+            </h2>
+            <span class="section-divider"></span>
+        </div>
+        <!-- end section-heading -->
+    </div>
+    <!-- end container -->
+
+    <div class="card-content-wrapper bg-gray pt-50px pb-120px">
+        <div class="container">
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active"
+                     id="business"
+                     role="tabpanel"
+                     aria-labelledby="business-tab">
+                    <div class="row">
+                        @foreach (var item in Model.Courses)
+                        {
+                            <div class="col-lg-4 col-md-6 mb-4 d-flex">
+                                <div class="card card-item card-preview w-100">
+                                    <div class="card-image">
+                                        <a href="course-details.html" class="d-block">
+                                            <img class="card-img-top lazy"
+                                                 src="@item.ImagePath"
+                                                 data-src="~/../images/img8.jpg"
+                                                 alt="Card image cap" />
+                                        </a>
+                                    </div>
+                                    <!-- end card-image -->
+                                    <div class="card-body d-flex flex-column">
+                                        <h6 class="ribbon ribbon-blue-bg fs-14 mb-3">
+                                            @item.CourseDate
+                                        </h6>
+                                        <h5 class="card-title">
+                                            <a asp-action="CDetails"
+                                               asp-controller="Home"
+                                               asp-route-id="@item.CoursesId">@item.CourseName</a>
+                                        </h5>
+                                        <p class="card-text">
+                                            <a href="teacher-detail.html">@item.CourseDescription</a>
+                                        </p>
+                                        <div class="d-flex justify-content-between align-items-center mt-auto">
+                                            <p class="card-price text-black font-weight-bold">
+                                                @item.PriceBeforeDiscount
+                                                <span class="before-price font-weight-medium">@item.Price JD</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!-- end card-body -->
+                                </div>
+                                <!-- end card -->
+                            </div>
+                        }
+                    </div>
+                    <!-- end row -->
+                </div>
+            </div>
+            <!-- end tab-content -->
+            <div class="more-btn-box mt-4 text-center">
+                <a href="course-grid.html" class="btn theme-btn">
+                    Browse all Courses <i class="la la-arrow-right icon ms-1"></i>
+                </a>
+            </div>
+            <!-- end more-btn-box -->
+        </div>
+        <!-- end container -->
+    </div>
+    <!-- end card-content-wrapper -->
+</section>
+
+
+
+@await Component.InvokeAsync("Article")
